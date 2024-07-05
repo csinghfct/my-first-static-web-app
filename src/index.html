@@ -5,165 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Vanilla JavaScript App</title>
-<script>
-{
-    "exportFormatVersion": 2
-    , "exportTime": "2019-06-17 16:39:01"
-    , "containerVersion": {
-        "path": "accounts/4701222272/containers/11066057/versions/0"
-        , "accountId": "4701222272"
-        , "containerId": "11066057"
-        , "containerVersionId": "0"
-        , "container": {
-            "path": "accounts/4701222272/containers/11066057"
-            , "accountId": "4701222272"
-            , "containerId": "11066057"
-            , "name": "noticedemo.evidon.com"
-            , "publicId": "GTM-5Q46TJW"
-            , "usageContext": ["WEB"]
-            , "fingerprint": "1560272722083"
-            , "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/4701222272/containers/11066057/workspaces?apiLink=container"
+<script type="text/javascript">
+    (function (id) {
+        function append(scriptid, url, async) {
+            var d = document, sn = 'script', f = d.getElementsByTagName(sn)[0];
+            if (!f) f = d.head;
+            var s = d.createElement(sn);
+            s.async = async;
+            s.id = scriptid;
+            s.src = url;
+            s.charset = 'utf-8';
+            f.parentNode.insertBefore(s, f);
         }
-        , "tag": [{
-            "accountId": "4701222272"
-            , "containerId": "11066057"
-            , "tagId": "5"
-            , "name": "Evidon Consent Tag"
-            , "type": "html"
-            , "parameter": [{
-                "type": "TEMPLATE"
-                , "key": "html"
-                , "value": "
-\n<script type=\"text/javascript\">
-\n    (function (id) {
-\n        function append(scriptid, url, async) {
-\n            var d = document, sn = 'script', f = d.getElementsByTagName(sn)[0];
-\n            if (!f) f = d.head;
-\n            var s = d.createElement(sn);
-\n            s.async = async;
-\n            s.id = scriptid;
-\n            s.src = url;
-\n            s.charset = 'utf-8';
-\n            f.parentNode.insertBefore(s, f);
-\n        }
-\n
-\n        function is2parttld(value) {
-\n            var tldindicators = ['co', 'com', 'info', 'web', 'info', 'gov', 'edu', 'biz', 'net', 'org'];
-\n            var countryindicators = ['uk', 'us', 'fr', 'es', 'de', 'at', 'au', 'ae', 'be', 'br', 'ca', 'ch', 'cn', 'co', 'cz', 'dk', 'eg', 'eu', 'fi', 'gb', 'gr', 'hk', 'hr', 'hu', 'ie', 'in', 'jp', 'mx', 'nl', 'no', 'nz', 'pl', 'ro', 'ru', 'se'];
-\n            return (tldindicators.indexOf(value) !== -1 || countryindicators.indexOf(value) !== -1);
-\n        }
-\n
-\n        function getRootDomain() {
-\n            var parts = window.location.hostname.split('.');
-\n            if (parts.length === 2) rootDomain = parts[0];
-\n            else if (parts.length > 2) {
-\n                // see if the next to last value is a common tld
-\n                var part = parts[parts.length - 2];
-\n                if (is2parttld(part)) {
-\n                    rootDomain = parts[parts.length - 3]; // go back one more
-\n                }
-\n                else {
-\n                    rootDomain = part;
-\n                }
-\n            }
-\n
-\n            return rootDomain;
-\n        }
-\n
-\n        window.evidon = {};
-\n        window.evidon.id = id;
-\n        window.evidon.test = false;  // set to true for non-production testing.
-\n        //window.evidon.userid = '';
-\n
-\n        var cdn = '//c.evidon.com/', rootDomain = getRootDomain(), noticecdn = cdn + 'sitenotice/';
-\n        append('evidon-notice', noticecdn + 'evidon-sitenotice-tag.js', false);
-\n        append('evidon-location', cdn + 'geo/country.js', true);
-\n        append('evidon-themes', noticecdn + id + '/snthemes.js', true);
-\n        if (rootDomain) append('evidon-settings', noticecdn + id + '/' + rootDomain + (window.evidon.test ? '/test' : '') + '/settingsV2.js', true);
-\n
-\n        window.evidon.priorConsentCallback = function (categories, vendors, cookies) {
-\n            // add the tags which need to wait for prior consent
-\n            // here.  This should be all your advertising tags and
-\n            // probably most of your social and tracking tags.
-\n            
-\n        }
-\n
-\n        window.evidon.closeCallback = function () {
-\n            // this is executed if the user closed a UI element without either Accepting (providing consent)
-\n            // or Declining (declining to provide consent).
-\n        }
-\n
-\n        window.evidon.consentWithdrawnCallback = function () {
-\n            // this is exeucted if the user withdraws consent and elects to
-\n            // no longer allow technologies to run on the site.
-\n        }
-\n
-\n        window.evidon.consentDeclinedCallback = function () {
-\n            // this is executed if the user explicitly declines giving consent by
-\n            // using a Decline button
-\n        }
-\n    })(7193);
-\n</script>"
-            }, {
-                "type": "BOOLEAN"
-                , "key": "supportDocumentWrite"
-                , "value": "false"
-            }]
-            , "fingerprint": "1550252170759"
-            , "firingTriggerId": ["2147479553"]
-            , "tagFiringOption": "ONCE_PER_EVENT"
-        }]
-        , "trigger": []
-        , "variable": [{
-            "accountId": "4701222272"
-            , "containerId": "11066057"
-            , "variableId": "3"
-            , "name": "Consented Categories"
-            , "type": "v"
-            , "parameter": [{
-                "type": "INTEGER"
-                , "key": "dataLayerVersion"
-                , "value": "2"
-            }, {
-                "type": "BOOLEAN"
-                , "key": "setDefaultValue"
-                , "value": "false"
-            }, {
-                "type": "TEMPLATE"
-                , "key": "name"
-                , "value": "consentCategories"
-            }]
-            , "fingerprint": "1550247342982"
-            , "formatValue": {}
-        }, {
-            "accountId": "4701222272"
-            , "containerId": "11066057"
-            , "variableId": "4"
-            , "name": "Consented Vendors"
-            , "type": "v"
-            , "parameter": [{
-                "type": "INTEGER"
-                , "key": "dataLayerVersion"
-                , "value": "2"
-            }, {
-                "type": "BOOLEAN"
-                , "key": "setDefaultValue"
-                , "value": "false"
-            }, {
-                "type": "TEMPLATE"
-                , "key": "name"
-                , "value": "consentVendors"
-            }]
-            , "fingerprint": "1550247373100"
-            , "formatValue": {}
-        }]
-        , "fingerprint": "0"
-        , "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/4701222272/containers/11066057/versions/0?apiLink=version"
-    }
-}
+
+        function is2parttld(value) {
+            var tldindicators = ['co', 'com', 'info', 'web', 'info', 'gov', 'edu', 'biz', 'net', 'org'];
+            var countryindicators = ['uk', 'us', 'fr', 'es', 'de', 'at', 'au', 'ae', 'be', 'br', 'ca', 'ch', 'cn', 'co', 'cz', 'dk', 'eg', 'eu', 'fi', 'gb', 'gr', 'hk', 'hr', 'hu', 'ie', 'in', 'jp', 'mx', 'nl', 'no', 'nz', 'pl', 'ro', 'ru', 'se'];
+            return (tldindicators.indexOf(value) !== -1 || countryindicators.indexOf(value) !== -1);
+        }
+
+        function getRootDomain() {
+            var parts = window.location.hostname.split('.');
+            if (parts.length === 2) rootDomain = parts[0];
+            else if (parts.length > 2) {
+                // see if the next to last value is a common tld
+                var part = parts[parts.length - 2];
+                if (is2parttld(part)) {
+                    rootDomain = parts[parts.length - 3]; // go back one more
+                }
+                else {
+                    rootDomain = part;
+                }
+            }
+
+            return rootDomain;
+        }
+
+        window.evidon = {};
+        window.evidon.id = id;
+        window.evidon.test = false;  // set to true for non-production testing.
+        //window.evidon.userid = '';
+
+        var cdn = '//c.evidon.com/', rootDomain = getRootDomain(), noticecdn = cdn + 'sitenotice/';
+        append('evidon-notice', noticecdn + 'evidon-sitenotice-tag.js', false);
+        append('evidon-location', cdn + 'geo/country.js', true);
+        append('evidon-themes', noticecdn + id + '/snthemes.js', true);
+        if (rootDomain) append('evidon-settings', noticecdn + id + '/' + rootDomain + (window.evidon.test ? '/test' : '') + '/settingsV2.js', true);
+
+        window.evidon.priorConsentCallback = function (categories, vendors, cookies) {
+            // add the tags which need to wait for prior consent
+            // here.  This should be all your advertising tags and
+            // probably most of your social and tracking tags.
+            
+        }
+
+        window.evidon.closeCallback = function () {
+            // this is executed if the user closed a UI element without either Accepting (providing consent)
+            // or Declining (declining to provide consent).
+        }
+
+        window.evidon.consentWithdrawnCallback = function () {
+            // this is exeucted if the user withdraws consent and elects to
+            // no longer allow technologies to run on the site.
+        }
+
+        window.evidon.consentDeclinedCallback = function () {
+            // this is executed if the user explicitly declines giving consent by
+            // using a Decline button
+        }
+    })(7193);
 </script>
   
-<script>
+<script type="text/javascript">
 function setCookie(cname,cvalue,exdays) {
   const d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
