@@ -19,4 +19,10 @@ main > h1 {
   text-align: center;
   font-size: 3.5em;
 }
+.evidon-prefdiag-link{
+     pointer-events: none;
+}
+.evidon-switch-slider{
+     float: right;
+}
 
