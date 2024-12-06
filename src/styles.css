@@ -23,6 +23,6 @@ main > h1 {
      pointer-events: none;
 }
 .evidon-switch{
-     float: left;
+     float: left !important;
 }
 
