@@ -22,6 +22,14 @@ main > h1 {
 .evidon-prefdiag-link{
      pointer-events: none;
 }
+/*
 [aria-label:"Targeting and Social Media Cookies category"]:after {
  padding: 20px;
 }
+*/
+.evidon-switch-slider{
+     float:center;
+}
+
+
+
