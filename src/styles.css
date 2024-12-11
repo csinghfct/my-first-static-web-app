@@ -23,6 +23,5 @@ main > h1 {
      pointer-events: none;
 }
 [aria-label="Targeting and Social Media Cookies category"]:after {
-content: attr(aria-label);
  padding: 20px;
 }
