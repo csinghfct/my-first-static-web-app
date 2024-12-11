@@ -14,7 +14,6 @@ main {
   width: 50%;
    padding: 0;
 }
-
 main > h1 {
   text-align: center;
   font-size: 3.5em;
@@ -23,7 +22,7 @@ main > h1 {
      pointer-events: none;
 }
 .evidon-switch-slider{
-     padding: 10px;
+     margin: 50px;
 }
 
 
